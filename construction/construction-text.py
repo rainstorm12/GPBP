@@ -71,14 +71,14 @@ def preprocess_triple(text_list):
             t['predicate'] = '子系统'
         else:
             t['predicate'] = t['object_type']
-        return triple
+    return triple
 
 if __name__=="__main__":
     #资源读取
     with open('./data/text/somuut.json', 'r',encoding = 'utf-8') as f:
         text_list = json.load(f)
     triple = preprocess_triple(text_list)
-    
+
     ##图谱此时已经不是空集合
     test_graph = Graph(
             "http://localhost:7474", 
