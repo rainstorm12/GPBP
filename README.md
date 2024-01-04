@@ -5,7 +5,9 @@ This repo provides the source code & data of our paper "[GPBP: Pipeline Extracti
 ## Framework Illustration
 
 the main contributions of this paper are as follows: 
+
 • We construct, clean, and annotate corpus datasets from maintenance manuals and official documents of urban utility tunnel, which contains 800 sentences and nearly 30000 characters. We name the datasets Standards for Operation and Maintenance of Urban Utility Tunnel (SOMUUT). 
+
 • According to the specific application environment of utility tunnel, we proposed a Global Pointer Based Pipeline approach (GPBP) for entity and relation extraction, which has a better performance on SOMUUT than mainstream models like GPLinker
 
 ## Model Structure
@@ -16,6 +18,7 @@ the main contributions of this paper are as follows:
 
 ## Other Tools
 [Web demo](https://github.com/rainstorm12/pipe-graph) written by Vue framework
+
 [Server demo](https://github.com/rainstorm12/pipesite) written by Django framework
 
 # Citation
