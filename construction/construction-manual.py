@@ -62,7 +62,7 @@ def main(test_graph,dataset,EntityNodedict):
     # exceltitle = ['系统','巡查项目','Unnamed: 2','内容','方法','巡检周期']
     exceltitle = dataset.columns.values
 
-    nodetype = ['系统','巡查项目','巡查子项目','内容','方法','巡检周期']
+    nodetype = ['系统','巡查项目','巡查子项目','内容','巡检方法','巡检周期']
 
     #初始化relation表
     relationdict = {}
@@ -88,27 +88,27 @@ def main(test_graph,dataset,EntityNodedict):
                             sclnodedict[csd]=[]
                             #创建节点
                             node = Node ('巡查子项目', name = csd)
-                            #判断不重复
-                            if not node_duplicate_checking(node,EntityNodedict['巡查子项目']):
-                                #存入节点表
-                                EntityNodedict['巡查子项目'].append(node)
-                                #存入图谱
-                                test_graph.create(node)
-                            else:#重复返回对应节点,不需要存入图谱或节点表
-                                node = node_duplicate_checking(node,EntityNodedict['巡查子项目'])
+                            # #判断不重复
+                            # if not node_duplicate_checking(node,EntityNodedict['巡查子项目']):
+                            #存入节点表
+                            EntityNodedict['巡查子项目'].append(node)
+                            #存入图谱
+                            test_graph.create(node)
+                            # else:#重复返回对应节点,不需要存入图谱或节点表
+                            #     node = node_duplicate_checking(node,EntityNodedict['巡查子项目'])
                             sclnodedict[csd].append(node)
                             #内容部分重复创建节点
                             for csdcontext in scldict[csd]:
                                 #创建节点
                                 node = Node ('内容', name = csdcontext)
-                                #判断不重复
-                                if not node_duplicate_checking(node,EntityNodedict['内容']):
-                                    #存入节点表
-                                    EntityNodedict['内容'].append(node)
-                                    #存入图谱
-                                    test_graph.create(node)
-                                else:#重复返回对应节点,不需要存入图谱或节点表
-                                    node = node_duplicate_checking(node,EntityNodedict['内容'])
+                                # #判断不重复
+                                # if not node_duplicate_checking(node,EntityNodedict['内容']):
+                                #存入节点表
+                                EntityNodedict['内容'].append(node)
+                                #存入图谱
+                                test_graph.create(node)
+                                # else:#重复返回对应节点,不需要存入图谱或节点表
+                                #     node = node_duplicate_checking(node,EntityNodedict['内容'])
                                 sclnodedict[csd].append(node)
                     #内容中存在的子项目集合列表
                     #每个key下属一个list，[0]为本身节点及巡查自项目，后面为内容节点
@@ -118,6 +118,22 @@ def main(test_graph,dataset,EntityNodedict):
                         for data in cl:
                             #创建节点
                             node = Node (nt, name = data)
+                            # #判断不重复
+                            # if not node_duplicate_checking(node,EntityNodedict[nt]):
+                            #存入节点表
+                            EntityNodedict[nt].append(node)
+                            #存入图谱
+                            test_graph.create(node)
+                            # else:#重复返回对应节点,不需要存入图谱或节点表
+                            #     node = node_duplicate_checking(node,EntityNodedict[nt]) 
+                            node_list.append(node)  
+                else:
+                    node_list=[]
+                    cl = re.split('、',data_context)
+                    for data in cl:
+                        #创建节点
+                        node = Node (nt, name = data)
+                        if nt=='巡检方法' or nt=='巡检周期':
                             #判断不重复
                             if not node_duplicate_checking(node,EntityNodedict[nt]):
                                 #存入节点表
@@ -126,21 +142,11 @@ def main(test_graph,dataset,EntityNodedict):
                                 test_graph.create(node)
                             else:#重复返回对应节点,不需要存入图谱或节点表
                                 node = node_duplicate_checking(node,EntityNodedict[nt]) 
-                            node_list.append(node)  
-                else:
-                    node_list=[]
-                    cl = re.split('、',data_context)
-                    for data in cl:
-                        #创建节点
-                        node = Node (nt, name = data)
-                        #判断不重复
-                        if not node_duplicate_checking(node,EntityNodedict[nt]):
+                        else:
                             #存入节点表
                             EntityNodedict[nt].append(node)
                             #存入图谱
                             test_graph.create(node)
-                        else:#重复返回对应节点,不需要存入图谱或节点表
-                            node = node_duplicate_checking(node,EntityNodedict[nt]) 
                         node_list.append(node)             
             # 本行为nan则直接将上次的node作为本行的relation节点
             # 最后建立relation表
@@ -187,9 +193,10 @@ def main(test_graph,dataset,EntityNodedict):
 
 if __name__ == '__main__':
     #建图
-    from py2neo import Graph
-
-    test_graph = Graph("http://localhost:7474/", auth=("neo4j", "neo4j"))  # 连接neo4j图数据库
+    test_graph = Graph(
+        "http://localhost:7474", 
+        auth=('neo4j','neo4j')
+    )
     test_graph.delete_all()  # 删除已有的所有内容
 
     #表格信息读取
@@ -197,7 +204,7 @@ if __name__ == '__main__':
     xlsx = pd.ExcelFile(r'./data/manual/preprocessed_manual.xlsx')
 
     #初始化实例化node表（存储节点）
-    nodetype = ['系统','巡查项目','巡查子项目','内容','方法','巡检周期']
+    nodetype = ['系统','巡查项目','巡查子项目','内容','巡检方法','巡检周期']
     EntityNodedict = {}
     for type in nodetype:
         EntityNodedict[type] = []
@@ -208,10 +215,11 @@ if __name__ == '__main__':
 
     #构建多份
     sheetlist=['管廊本体','仪器仪表及自动化','综合及其他','通信软件','消防','电气供电']
-    for sname in sheetlist:
+    for sname in tqdm(sheetlist, desc="Creating Nodes and Relationships", unit="sheetlist"):
         dataset = pd.read_excel(xlsx, sname)
         main(test_graph,dataset,EntityNodedict)
     
+    test_graph.run("match(n:巡查子项目) remove n:巡查子项目 set n:巡查项目")
     # 可视化neo4j
     # MATCH (n) RETURN n LIMIT 10000
     # 查询父亲节点
@@ -222,5 +230,3 @@ if __name__ == '__main__':
     # MATCH path=(m)-[r*1..4]->(n) 
     # WHERE m.name='主体结构'
     # RETURN path
-
-    print("构建图谱结束")
