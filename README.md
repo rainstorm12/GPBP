@@ -11,7 +11,7 @@ the main contributions of this paper are as follows:
 
 <p float="left">
   <img src="img/framework.jpg" width="500" />
-  <img src="img/graph.jpg" width="350" />
+  <img src="img/graph.jpg" width="400" />
 </p>
 
 The resulting file structure should look like this:
