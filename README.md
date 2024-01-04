@@ -10,7 +10,7 @@ the main contributions of this paper are as follows:
 • According to the specific application environment of utility tunnel, we proposed a Global Pointer Based Pipeline approach (GPBP) for entity and relation extraction, which has a better performance on SOMUUT than mainstream models like GPLinker
 
 <p float="left">
-  <img src="img/framework.jpg" width="500" />
+  <img src="img/framework.jpg" width="450" />
   <img src="img/graph.jpg" width="400" />
 </p>
 
