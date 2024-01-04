@@ -10,15 +10,32 @@ the main contributions of this paper are as follows:
 
 • According to the specific application environment of utility tunnel, we proposed a Global Pointer Based Pipeline approach (GPBP) for entity and relation extraction, which has a better performance on SOMUUT than mainstream models like GPLinker
 
-## Model Structure
-<img src="img/framework.jpg" alt="our framework" style="zoom: 50%;" />
-
 ## Urban Utility Tunnel Knowledge Graph
+
+Start service of Neo4j
+
+```shell
+neo4j console
+```
+
+Build a knowledge graph on the platform through maintenance manuals (expert experience)
+
+```bash
+python construction/construction-manual.py 
+```
+
+### our Knowledge Graph
+
 <img src="img/graph.jpg" alt="our graph" style="zoom:50%;" />
 
+## Model Structure
+
+<img src="img/framework.jpg" alt="our framework" style="zoom: 50%;" />
+
 ## Other Tools
+
 [Web demo](https://github.com/rainstorm12/pipe-graph) written by Vue framework
 
 [Server demo](https://github.com/rainstorm12/pipesite) written by Django framework
 
-# Citation
+## Citation
