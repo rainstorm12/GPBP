@@ -39,3 +39,17 @@ python construction/construction-manual.py
 [Server demo](https://github.com/rainstorm12/pipesite) written by Django framework
 
 ## Citation
+
+If you find our work helpful, please cite the following:
+
+```bib
+@INPROCEEDINGS{10295733,
+  author={Chen, Jiyu and Qian, Jinchuan and Zhang, Xinmin and Song, Zhihuan and Wen, Chenying and Fan, Xueer},
+  booktitle={2023 CAA Symposium on Fault Detection, Supervision and Safety for Technical Processes (SAFEPROCESS)}, 
+  title={GPBP: Pipeline Extraction of Entities and Relations for Construction of Urban Utility Tunnel Knowledge Graph}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-6},
+  doi={10.1109/SAFEPROCESS58597.2023.10295733}}
+```
