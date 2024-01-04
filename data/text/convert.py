@@ -36,11 +36,8 @@ def convert(input_data,senid):
         ]
     }
     return output_data
-   
 
-with open('./data/text/text.json', 'w',encoding = 'utf-8') as file_obj:
-  for i in range(0,len(text_list)):
-    output_data = convert(text_list[i],i+1)
-    str = json.dumps(output_data,ensure_ascii=False,indent=2)
-    file_obj.write(str)
-    file_obj.write('\n')
+output_data = [convert(text_list[i],i+1) for i in range(0,len(text_list))]
+
+with open('./data/text/somuut.json', 'w',encoding = 'utf-8') as file_obj:
+    json.dump(output_data, file_obj, ensure_ascii=False, indent=2)

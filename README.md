@@ -1,8 +1,7 @@
 # GPBP
 This repo provides the source code & data of our paper "[GPBP: Pipeline Extraction of Entities and Relations for Construction of Urban Utility Tunnel Knowledge Graph](https://ieeexplore.ieee.org/document/10295733)" (SAFEPROCESS 2023).
 
-
-## Framework Illustration
+## Overview
 
 the main contributions of this paper are as follows: 
 
@@ -10,11 +9,35 @@ the main contributions of this paper are as follows:
 
 • According to the specific application environment of utility tunnel, we proposed a Global Pointer Based Pipeline approach (GPBP) for entity and relation extraction, which has a better performance on SOMUUT than mainstream models like GPLinker
 
+<p float="left">
+  <img src="img/framework.jpg" width="500" />
+  <img src="img/graph.jpg" width="500" />
+</p>
+
+The resulting file structure should look like this:
+
+```bash
+.
+├── README.md
+├── img/
+├── construction/
+    ├── construction-manual.py
+    ├── construction-text.py
+    
+└── data/
+    ├── manual/                 (maintenance manuals)
+    └── text/
+        ├── convert.py          (convert source data to dataset SOMUUT)
+        ├── source_data.json    (source label data)
+        ├── somuut.json         (the datasets SOMUUT)
+        └── ...
+```
+
 ## Urban Utility Tunnel Knowledge Graph
 
 Start service of Neo4j
 
-```shell
+```bash
 neo4j console
 ```
 
@@ -24,13 +47,11 @@ Build a knowledge graph on the platform through maintenance manuals (expert expe
 python construction/construction-manual.py 
 ```
 
-### our Knowledge Graph
+Extend knowledge graph on the platform through text data
 
-<img src="img/graph.jpg" alt="our graph" style="zoom:50%;" />
-
-## Model Structure
-
-<img src="img/framework.jpg" alt="our framework" style="zoom: 50%;" />
+```
+python construction\construction-text.py
+```
 
 ## Other Tools
 
