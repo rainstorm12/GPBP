@@ -33,6 +33,7 @@ The resulting file structure should look like this:
         ├── somuut.json         (the datasets SOMUUT)
         ├── triple.txt          (the datasets SOMUUT in the form of triple)
         └── ...
+└── src                         (core part of GPBP)
 ```
 
 ## Data Process
@@ -68,6 +69,11 @@ python construction/construction-text.py
 [Web demo](https://github.com/rainstorm12/pipe-graph) written by Vue framework
 
 [Server demo](https://github.com/rainstorm12/pipesite) written by Django framework
+
+## Thanks
+Our work is based on [GPLinker](https://kexue.fm/archives/8888), thanks to Jinlin Su.
+
+Thanks to the [PyTorch version repo](https://github.com/xhw205/GPLinker_torch) of GPLinker which our framework is based on.
 
 ## Citation
 

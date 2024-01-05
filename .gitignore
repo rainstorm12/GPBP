@@ -1,2 +1,5 @@
 # the maintenance manual is private data
 *.xlsx
+src/pretrain_model/RoBERTa_zh_Large_PyTorch/*.txt
+src/pretrain_model/RoBERTa_zh_Large_PyTorch/*.json
+src/pretrain_model/RoBERTa_zh_Large_PyTorch/*.bin
