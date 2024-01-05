@@ -40,44 +40,15 @@ def search_graph(node_matcher,node,nodetype,nodename):
     anode = node_matcher.match(nodetype).where(name=nodename)
     return node_duplicate_checking(node,anode)
 
-def preprocess_triple(text_list):
-    #预处理三元组输入
-    triple = []
-    for t in text_list:
-        triple = triple + t["spo_list"]
-
-    shemas = {"CON":"内容","PRO":"巡查项目","MAI":"维护方法","PAT":"巡检方法","PER":"巡检周期"}
-    systems = ["综合及其他系统","通信软件系统","消防系统","管廊本体结构","供电及照明系统","通风系统","监控与报警系统","排水系统"]
-    for t in triple:
-        
-        t['object_type'] = shemas[t['object_type']]
-        t['subject_type'] = shemas[t['subject_type']]
-
-        for s in systems:
-            if t['object'] == s:
-                t['object_type'] = "系统"
-            if t['subject'] == s:
-                t['subject_type'] = "系统"
-
-        if t['predicate'] == 'contain' and t['object_type']=="内容" and t['subject_type']=="内容":
-            t['predicate'] = '子内容'
-        elif t['predicate'] == 'contain' and t['object_type']=="巡检项目" and t['subject_type']=="巡检项目":
-            t['predicate'] = '巡检子项目'
-        elif t['predicate'] == 'contain' and t['object_type']=="巡检方法" and t['subject_type']=="巡检方法":
-            t['predicate'] = '巡检子方法'
-        elif t['predicate'] == 'contain' and t['object_type']=="维护方法" and t['subject_type']=="维护方法":
-            t['predicate'] = '维护子方法'
-        elif t['predicate'] == 'contain' and t['object_type']=="系统" and t['subject_type']=="系统":
-            t['predicate'] = '子系统'
-        else:
-            t['predicate'] = t['object_type']
-    return triple
-
 if __name__=="__main__":
     #资源读取
     with open('./data/text/somuut.json', 'r',encoding = 'utf-8') as f:
         text_list = json.load(f)
-    triple = preprocess_triple(text_list)
+    
+    #整合全部的triple
+    triple = []
+    for t in text_list:
+        triple = triple + t["spo_list"]
 
     ##图谱此时已经不是空集合
     test_graph = Graph(

@@ -21,19 +21,28 @@ The resulting file structure should look like this:
 ├── README.md
 ├── img/
 ├── construction/
-    ├── construction-manual.py
-    ├── construction-text.py
+    ├── construction-manual.py  (construct with maintenance manuals)
+    ├── construction-text.py    (construct with text data)
     
 └── data/
     ├── manual/                 (maintenance manuals)
     └── text/
         ├── convert.py          (convert source data to dataset SOMUUT)
         ├── source_data.json    (source label data)
+        ├── source_somuut.json  (source somuut data)
         ├── somuut.json         (the datasets SOMUUT)
         └── ...
 ```
 
-## Urban Utility Tunnel Knowledge Graph
+## Data Process
+
+convert source data to the datasets SOMUUT
+
+```bash
+python data/text/convert.py 
+```
+
+## Urban Utility Tunnel Knowledge Graph Construction
 
 Start service of Neo4j
 
@@ -49,8 +58,8 @@ python construction/construction-manual.py
 
 Extend knowledge graph on the platform through text data
 
-```
-python construction\construction-text.py
+```bash
+python construction/construction-text.py
 ```
 
 ## Other Tools
