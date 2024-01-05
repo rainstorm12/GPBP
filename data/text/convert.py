@@ -39,8 +39,35 @@ import copy
 class preprocess_triple():
     #预处理三元组输入
     def __init__(self) -> None:
-        self.shemas = {"CON":"内容","PRO":"巡查项目","MAI":"维护方法","PAT":"巡检方法","PER":"巡检周期"}
-        self.systems = ["综合及其他系统","通信软件系统","消防系统","管廊本体结构","供电及照明系统","通风系统","监控与报警系统","排水系统"]
+        self.shemas = {"CON":"内容","PRO":"巡查项目","MAI":"维护方法","PAT":"巡查方法","PER":"巡查周期"}
+        self.systems = ["综合及其他系统","通信软件系统","消防系统","管廊本体结构","供电及照明系统","通风系统","监控与报警系统","排水系统"]#全部的系统名称
+        self.rules = [  #包含关系单独罗列
+                        {"subject_type": "内容", "predicate": "contain", "object_type": "内容","rule_predicate":"包含"},
+                        {"subject_type": "巡查项目", "predicate": "contain", "object_type": "巡查项目","rule_predicate":"巡查子项目"},
+                        {"subject_type": "巡查方法", "predicate": "contain", "object_type": "巡查方法","rule_predicate":"巡查子方法"},
+                        {"subject_type": "维护方法", "predicate": "contain", "object_type": "维护方法","rule_predicate":"维护子方法"},
+                        #巡查项目/内容的维护方法，维护方法对应的内容/周期
+                        {"subject_type": "巡查项目", "predicate": "need", "object_type": "维护方法","rule_predicate":"维护方法"},
+                        {"subject_type": "内容", "predicate": "need", "object_type": "维护方法","rule_predicate":"维护方法"},
+                        {"subject_type": "维护方法", "predicate": "need", "object_type": "内容","rule_predicate":"维护内容"},
+                        {"subject_type": "维护方法", "predicate": "need", "object_type": "巡查周期","rule_predicate":"维护周期"},
+                        #巡查项目/内容的巡查方法，巡查项目/方法对应的巡查内容，巡查项目/方法/内容对应的周期
+                        {"subject_type": "内容", "predicate": "need", "object_type": "巡查方法","rule_predicate":"巡查方法"},
+                        {"subject_type": "巡查项目", "predicate": "need", "object_type": "巡查方法","rule_predicate":"巡查方法"},
+                        {"subject_type": "巡查项目", "predicate": "need", "object_type": "内容","rule_predicate":"巡查内容"},
+                        {"subject_type": "巡查方法", "predicate": "need", "object_type": "内容","rule_predicate":"巡查内容"},
+                        {"subject_type": "内容", "predicate": "need", "object_type": "巡查周期","rule_predicate":"巡查周期"},
+                        {"subject_type": "巡查项目", "predicate": "need", "object_type": "巡查周期","rule_predicate":"巡查周期"},
+                        {"subject_type": "巡查方法", "predicate": "need", "object_type": "巡查周期","rule_predicate":"巡查周期"},
+                        #同种内容/维护方法/巡查项目/巡查方法存在递进式的需要关系
+                        {"subject_type": "内容", "predicate": "need", "object_type": "内容","rule_predicate":"需要"},
+                        {"subject_type": "维护方法", "predicate": "need", "object_type": "维护方法","rule_predicate":"需要"},
+                        {"subject_type": "巡查项目", "predicate": "need", "object_type": "巡查项目","rule_predicate":"需要"},
+                        {"subject_type": "巡查方法", "predicate": "need", "object_type": "巡查方法","rule_predicate":"需要"},
+                        #特殊的巡查方法需要维护方法支持，维护方法需要巡查项目支持
+                        {"subject_type": "巡查方法", "predicate": "need", "object_type": "维护方法","rule_predicate":"需要"},
+                        {"subject_type": "维护方法", "predicate": "need", "object_type": "巡查项目","rule_predicate":"需要"},]
+
     def rule_process(self,source_triple,triple_copy=False):
         if triple_copy==True:
             triple = copy.deepcopy(source_triple)
@@ -54,19 +81,12 @@ class preprocess_triple():
                 triple['object_type'] = "系统"
             if triple['subject'] == s:
                 triple['subject_type'] = "系统"
+        
+        for rule in self.rules:
+            if triple['predicate'] == rule['predicate'] and triple['subject_type']==rule['subject_type'] and triple['object_type']==rule['object_type']:
+                triple['predicate'] = rule['rule_predicate']
+                break
 
-        if triple['predicate'] == 'contain' and triple['object_type']=="内容" and triple['subject_type']=="内容":
-            triple['predicate'] = '子内容'
-        elif triple['predicate'] == 'contain' and triple['object_type']=="巡检项目" and triple['subject_type']=="巡检项目":
-            triple['predicate'] = '巡检子项目'
-        elif triple['predicate'] == 'contain' and triple['object_type']=="巡检方法" and triple['subject_type']=="巡检方法":
-            triple['predicate'] = '巡检子方法'
-        elif triple['predicate'] == 'contain' and triple['object_type']=="维护方法" and triple['subject_type']=="维护方法":
-            triple['predicate'] = '维护子方法'
-        elif triple['predicate'] == 'contain' and triple['object_type']=="系统" and triple['subject_type']=="系统":
-            triple['predicate'] = '子系统'
-        else:
-            triple['predicate'] = triple['object_type']
         return triple
 
 if __name__=="__main__":

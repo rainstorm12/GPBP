@@ -31,6 +31,7 @@ The resulting file structure should look like this:
         ├── source_data.json    (source label data)
         ├── source_somuut.json  (source somuut data)
         ├── somuut.json         (the datasets SOMUUT)
+        ├── triple.txt          (the datasets SOMUUT in the form of triple)
         └── ...
 ```
 
