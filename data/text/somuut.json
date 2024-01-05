@@ -1565,14 +1565,14 @@
     "text": "综合管廊通风系统运行维护对象应包括综合管廊内的风机、",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "通风系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "风机",
         "object_type": "巡查项目",
         "subject": "通风系统",
@@ -2461,56 +2461,56 @@
     "text": "综合管廊内监控与报警系统运行维护及安全管理对象应包括监控中心机房、环境与设备监控系统、安全防范系统、通信系统、预警与报警系统、地理信息系统和统一管理平台等。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "监控与报警系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "监控中心机房",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "环境与设备监控系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "安全防范系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "通信系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "预警与报警系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "地理信息系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "统一管理平台",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
@@ -2523,49 +2523,49 @@
     "text": "综合管廊通风系统维护范围包括综合管廊内的风机、通风口（机电设施）和风管、排烟防火阀，以及管理用房、设备用房的空调系统等。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "通风系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "风机",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "通风口",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "机电设施",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "风管",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "排烟防火阀",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查项目",
         "object": "管理用房、设备用房的空调系统",
         "object_type": "巡查项目",
         "subject": "通风系统",
@@ -3025,28 +3025,28 @@
     "text": "综合管廊通风系统运行维护及安全管理对象应包括通风设备、通风管道及附件等通风设施设备和空调系统设施设备。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "通风系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "通风设备",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "通风管道及附件",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "空调系统",
         "object_type": "巡查项目",
         "subject": "通风系统",
@@ -3397,7 +3397,7 @@
     "text": "监控与报警系统的检测方法与要求应符合现行行业标准《建筑设备监控系统工程技术规范》JGJ/T334的有关规定。",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "检测方法与要求",
         "object_type": "内容",
         "subject": "监控与报警系统",
@@ -3636,14 +3636,14 @@
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "主要设备及组件",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查方法",
         "object": "日常巡检",
         "object_type": "巡查方法",
         "subject": "通风系统",
@@ -3920,35 +3920,35 @@
     "text": "综合管廊消防系统运行维护及安全管理对象应包括防火分隔、灭火系统、排烟系统及灭火器材等设施设备。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "防火分隔",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "灭火系统",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "排烟系统",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "灭火器材",
         "object_type": "巡查项目",
         "subject": "消防系统",
@@ -4951,35 +4951,35 @@
     "text": "综合管廊消防系统包括火灾自动报警系统、超细干粉灭火系统以及防火分离、灭火器材等设施设备。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "火灾自动报警系统",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "超细干粉灭火系统",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "防火分离",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "灭火器材",
         "object_type": "巡查项目",
         "subject": "消防系统",
@@ -5636,14 +5636,14 @@
     "text": "原因需要暂时停用消防系统的，应有确保消防安全的有效措施，维修后应恢复到正常的工作状态。",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "确保消防安全的有效措施",
         "object_type": "内容",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "正常的工作状态",
         "object_type": "内容",
         "subject": "消防系统",
@@ -6106,28 +6106,28 @@
     "text": "综合管廊消防系统的巡检、维修、保养等运行维护工作应符合现行国家标准《建筑消防设施的维护管理》GB 25201的有关规定；消防系统的巡检应以对消防设施的巡查为主，巡检每周不应少于1次。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "巡检",
         "object_type": "内容",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "维修",
         "object_type": "内容",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "保养",
         "object_type": "内容",
         "subject": "消防系统",
@@ -6155,7 +6155,7 @@
         "subject_type": "内容"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "消防设施",
         "object_type": "巡查项目",
         "subject": "消防系统",
@@ -8212,7 +8212,7 @@
     "text": "通风系统的运行应符合下列要求：",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "运行",
         "object_type": "内容",
         "subject": "通风系统",
@@ -8389,7 +8389,7 @@
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "附属设施",
@@ -8410,21 +8410,21 @@
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "监控与报警系统",
         "object_type": "系统",
         "subject": "附属设施",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "通风系统",
         "object_type": "系统",
         "subject": "附属设施",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "排水系统",
         "object_type": "系统",
         "subject": "附属设施",
@@ -10844,42 +10844,42 @@
     "text": "综合管廊监控与报警系统的运行维护及安全管理对象应包括监控中心机房、环境与设备监控系统、安全防范系统、通信系统、预警与报警系统和统一管理平台等。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "监控中心机房",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "环境与设备监控系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "安全防范系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "通信系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "预警与报警系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "统一管理平台",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
@@ -11688,35 +11688,35 @@
     "text": "综合管廊消防系统的巡查、检测、维修、保养等维护工作的实施应符合现行国家标准《建筑消防设施的维护管理》GB 25201的有关规定。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查方法",
         "object": "巡查",
         "object_type": "巡查方法",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查方法",
         "object": "检测",
         "object_type": "巡查方法",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "维护方法",
         "object": "维修",
         "object_type": "维护方法",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "维护方法",
         "object": "保养",
         "object_type": "维护方法",
         "subject": "消防系统",
@@ -11872,7 +11872,7 @@
     "text": "监控与报警系统的运行应符合下列要求：",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "运行",
         "object_type": "内容",
         "subject": "监控与报警系统",
@@ -11898,42 +11898,42 @@
     "text": "综合管廊内监控与报警系统运行维护对象应包括监控中心机房、环境与设备监控系统、安全防范系统、通信系统、预警与报警系统和智慧管理平台等。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "监控与报警系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "监控中心机房",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "环境与设备监控系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "安全防范系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "通信系统",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "预警与报警系统和智慧管理平台",
         "object_type": "巡查项目",
         "subject": "监控与报警系统",
@@ -12226,14 +12226,14 @@
     "text": "综合管廊消防系统的检测每年不应少于1次，系统检测应包括全部系统设备、组件等；检测技术要求和方法应符合现行行业标准《建筑消防设施检测技术规程》GA 503的有关规定。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查周期",
         "object": "每年不应少于1次",
         "object_type": "巡查周期",
         "subject": "消防系统",
@@ -12403,35 +12403,35 @@
     "text": "综合管廊内的风机、通风口、风管、排烟防火阀等组成的通风系统，除保持综合管廊内部的温度、湿度和空气质量满足人员活动及设备运行要求功能外，同时还用作机械排烟设施。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "通风系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "风机",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "通风口",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "风管",
         "object_type": "巡查项目",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "排烟防火阀",
         "object_type": "巡查项目",
         "subject": "通风系统",
@@ -12501,7 +12501,7 @@
         "subject_type": "内容"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "用作机械排烟设施",
         "object_type": "内容",
         "subject": "通风系统",
@@ -14463,7 +14463,7 @@
     "text": "根据外部环境温度、湿度等因素制定通风系统运行方案。",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "运行方案",
         "object_type": "内容",
         "subject": "通风系统",
@@ -14497,14 +14497,14 @@
     "text": "此外，消防系统运行维护作业时，应特别注意管线穿越防火分隔处阻火包等防火封堵材料的严密性。",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "运行维护",
         "object_type": "内容",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "管线",
         "object_type": "巡查项目",
         "subject": "消防系统",
@@ -15359,14 +15359,14 @@
         "subject_type": "内容"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "运行方案",
         "object_type": "内容",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "外部环境",
         "object_type": "内容",
         "subject": "通风系统",
@@ -15393,7 +15393,7 @@
     "text": "排水系统巡检每月不应少于1次，汛期、供热期应增加巡检频次。",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查周期",
         "object": "每月不应少于1次",
         "object_type": "巡查周期",
         "subject": "排水系统",
@@ -15414,14 +15414,14 @@
         "subject_type": "内容"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "汛期",
         "object_type": "内容",
         "subject": "排水系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "供热期",
         "object_type": "内容",
         "subject": "排水系统",
@@ -15526,14 +15526,14 @@
     "text": "综合管廊监控与报警系统的运行维护尚应符合现行国家标准《城镇综合管廊监控与报警系统工程技术标准》 GB/T 51274的规定",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "监控与报警系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "运行维护",
         "object_type": "内容",
         "subject": "监控与报警系统",
@@ -15553,7 +15553,7 @@
     "text": "综合管廊通风系统运行维护及安全管理对象应包括通风设备、通风管道及附件、空调系统等设施设备。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "通风系统",
         "object_type": "系统",
         "subject": "综合管廊",
@@ -15799,49 +15799,49 @@
     "text": "综合管廊消防系统运行维护对象应包括防火分隔、火灾自动报警系统、灭火系统、排烟系统、消防指示标志及灭火器材等设施设备。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "防火分隔",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "火灾自动报警系统",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "灭火系统",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "排烟系统",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "消防指示标志",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "灭火器材",
         "object_type": "巡查项目",
         "subject": "消防系统",
@@ -15995,7 +15995,7 @@
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "排水系统",
         "object_type": "系统",
         "subject": "综合管廊",
@@ -17130,7 +17130,7 @@
     "text": "监控与报警系统的检测方法与要求应符合现行行业标准《建筑设备监控系统工程技术规范》JGJ/T 334的有关规定。",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "检测方法与要求",
         "object_type": "内容",
         "subject": "监控与报警系统",
@@ -18310,14 +18310,14 @@
     "text": "综合管廊消防系统的检测每年不应少于1次，系统检测应包括全部系统设备、组件等；",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查周期",
         "object": "每年不应少于1次",
         "object_type": "巡查周期",
         "subject": "消防系统",
@@ -20122,21 +20122,21 @@
     "text": "综合管廊消防系统应每年至少检测一次，检测对象包括全部系统设备、组件等。检测技术要求与方法应符合现行行业标准《建筑消防设施检测技术规程》GA 503的有关规定。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查方法",
         "object": "每年至少检测一次",
         "object_type": "巡查方法",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "检测对象",
         "object_type": "内容",
         "subject": "消防系统",
@@ -20298,49 +20298,49 @@
     "text": "综合管廊消防系统运行维护及安全管理对象应包括防火分隔、火灾自动报警系统、灭火系统、排烟系统、消防指示标志及灭火器材等设施设备。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "防火分隔",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "火灾自动报警系统",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "灭火系统",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "排烟系统",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "消防指示标志",
         "object_type": "巡查项目",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "灭火器材",
         "object_type": "巡查项目",
         "subject": "消防系统",
@@ -20787,7 +20787,7 @@
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "排水系统",
         "object_type": "系统",
         "subject": "综合管廊",
@@ -22314,7 +22314,7 @@
     "text": "监控与报警系统的运行功能应满足设计要求",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "运行功能",
         "object_type": "内容",
         "subject": "监控与报警系统",
@@ -23185,14 +23185,14 @@
     "text": "监控与报警系统应保持24小时不间断运行，并由监控值班人员及时进行信息报送、设备控制和操作。",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "保持24小时不间断运行",
         "object_type": "内容",
         "subject": "监控与报警系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "监控值班人员及时进行",
         "object_type": "内容",
         "subject": "监控与报警系统",
@@ -24328,35 +24328,35 @@
     "text": "综合管廊排水系统维护范围包括管道、阀门、水泵、水位仪等设备。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "排水系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "管道",
         "object_type": "巡查项目",
         "subject": "排水系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "阀门",
         "object_type": "巡查项目",
         "subject": "排水系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "水泵",
         "object_type": "巡查项目",
         "subject": "排水系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查项目",
         "object": "水位仪",
         "object_type": "巡查项目",
         "subject": "排水系统",
@@ -24966,14 +24966,14 @@
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "维护方法",
         "object": "维修",
         "object_type": "维护方法",
         "subject": "消防系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查方法",
         "object": "检查",
         "object_type": "巡查方法",
         "subject": "消防系统",
@@ -25205,14 +25205,14 @@
     "text": "综合管廊消防系统的检测应符合现行行业标准《建筑消防设施的检测技术规程》GA 503的有关规定。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查方法",
         "object": "检测",
         "object_type": "巡查方法",
         "subject": "消防系统",
@@ -25573,7 +25573,7 @@
     "text": "给排水系统巡检应包括下列内容：",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查方法",
         "object": "巡检",
         "object_type": "巡查方法",
         "subject": "排水系统",
@@ -26400,14 +26400,14 @@
     "text": "综合管廊消防系统的维护管理应符合现行国家标准《建筑消防设施的维护管理》GB 25201的有关规定。",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "消防系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "维护管理",
         "object_type": "内容",
         "subject": "消防系统",
@@ -27070,14 +27070,14 @@
     "text": "无爆炸风险后，再开启通风系统直至廊内环境参数安全，人员方可进入；",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "廊内环境参数安全",
         "object_type": "内容",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "无爆炸风险",
         "object_type": "内容",
         "subject": "通风系统",
@@ -27152,7 +27152,7 @@
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "排水系统",
         "object_type": "系统",
         "subject": "附属配套",
@@ -27166,7 +27166,7 @@
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "运行相协调",
         "object_type": "内容",
         "subject": "排水系统",
@@ -27289,21 +27289,21 @@
     "text": "综合管廊通风系统可能存在非持续运行工况，当人员进入综合管廊时，通风系统应提前启动运行，",
     "spo_list": [
       {
-        "predicate": "contain",
+        "predicate": "巡查子项目",
         "object": "通风系统",
         "object_type": "系统",
         "subject": "综合管廊",
         "subject_type": "巡查项目"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "非持续运行工况",
         "object_type": "内容",
         "subject": "通风系统",
         "subject_type": "系统"
       },
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "人员进入综合管廊",
         "object_type": "内容",
         "subject": "通风系统",
@@ -27951,7 +27951,7 @@
     "text": "排水系统的日常运行应满足以下功能要求：",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查内容",
         "object": "日常运行",
         "object_type": "内容",
         "subject": "排水系统",
@@ -28598,7 +28598,7 @@
     "text": "通风系统巡检每月不应少于1次，巡检内容应包括系统主要设备及组件的外观、连接、运转状况及通风换气次数测试。",
     "spo_list": [
       {
-        "predicate": "need",
+        "predicate": "巡查周期",
         "object": "每月不应少于1次",
         "object_type": "巡查周期",
         "subject": "通风系统",

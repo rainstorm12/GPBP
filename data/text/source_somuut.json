@@ -2565,7 +2565,7 @@
         "subject_type": "PRO"
       },
       {
-        "predicate": "need",
+        "predicate": "contain",
         "object": "管理用房、设备用房的空调系统",
         "object_type": "PRO",
         "subject": "通风系统",

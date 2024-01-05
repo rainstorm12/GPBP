@@ -43,19 +43,26 @@ class preprocess_triple():
         self.systems = ["综合及其他系统","通信软件系统","消防系统","管廊本体结构","供电及照明系统","通风系统","监控与报警系统","排水系统"]#全部的系统名称
         self.rules = [  #包含关系单独罗列
                         {"subject_type": "内容", "predicate": "contain", "object_type": "内容","rule_predicate":"包含"},
+                        {"subject_type": "系统", "predicate": "contain", "object_type": "系统","rule_predicate":"子系统"},
+                        {"subject_type": "系统", "predicate": "contain", "object_type": "巡查项目","rule_predicate":"巡查项目"},
+                        {"subject_type": "巡查项目", "predicate": "contain", "object_type": "系统","rule_predicate":"巡查子项目"},
                         {"subject_type": "巡查项目", "predicate": "contain", "object_type": "巡查项目","rule_predicate":"巡查子项目"},
                         {"subject_type": "巡查方法", "predicate": "contain", "object_type": "巡查方法","rule_predicate":"巡查子方法"},
                         {"subject_type": "维护方法", "predicate": "contain", "object_type": "维护方法","rule_predicate":"维护子方法"},
                         #巡查项目/内容的维护方法，维护方法对应的内容/周期
+                        {"subject_type": "系统", "predicate": "need", "object_type": "维护方法","rule_predicate":"维护方法"},
                         {"subject_type": "巡查项目", "predicate": "need", "object_type": "维护方法","rule_predicate":"维护方法"},
                         {"subject_type": "内容", "predicate": "need", "object_type": "维护方法","rule_predicate":"维护方法"},
                         {"subject_type": "维护方法", "predicate": "need", "object_type": "内容","rule_predicate":"维护内容"},
                         {"subject_type": "维护方法", "predicate": "need", "object_type": "巡查周期","rule_predicate":"维护周期"},
                         #巡查项目/内容的巡查方法，巡查项目/方法对应的巡查内容，巡查项目/方法/内容对应的周期
                         {"subject_type": "内容", "predicate": "need", "object_type": "巡查方法","rule_predicate":"巡查方法"},
+                        {"subject_type": "系统", "predicate": "need", "object_type": "巡查方法","rule_predicate":"巡查方法"},
                         {"subject_type": "巡查项目", "predicate": "need", "object_type": "巡查方法","rule_predicate":"巡查方法"},
+                        {"subject_type": "系统", "predicate": "need", "object_type": "内容","rule_predicate":"巡查内容"},
                         {"subject_type": "巡查项目", "predicate": "need", "object_type": "内容","rule_predicate":"巡查内容"},
                         {"subject_type": "巡查方法", "predicate": "need", "object_type": "内容","rule_predicate":"巡查内容"},
+                        {"subject_type": "系统", "predicate": "need", "object_type": "巡查周期","rule_predicate":"巡查周期"},
                         {"subject_type": "内容", "predicate": "need", "object_type": "巡查周期","rule_predicate":"巡查周期"},
                         {"subject_type": "巡查项目", "predicate": "need", "object_type": "巡查周期","rule_predicate":"巡查周期"},
                         {"subject_type": "巡查方法", "predicate": "need", "object_type": "巡查周期","rule_predicate":"巡查周期"},
@@ -86,7 +93,6 @@ class preprocess_triple():
             if triple['predicate'] == rule['predicate'] and triple['subject_type']==rule['subject_type'] and triple['object_type']==rule['object_type']:
                 triple['predicate'] = rule['rule_predicate']
                 break
-
         return triple
 
 if __name__=="__main__":
