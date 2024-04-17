@@ -79,3 +79,9 @@ if __name__=="__main__":
             if len(list(relationship_matcher.match((node1,node2), r_type=None)))==0:
                 relation = Relationship(node1,t['predicate'],node2)
                 test_graph.create(relation)
+    
+    #修复一个节点名称不一致的问题
+    #所有的巡查方法改成巡检方法
+    test_graph.run("match(n:巡查方法) remove n:巡查方法 set n:巡检方法")
+    #所有的巡查周期改成巡检周期
+    test_graph.run("match(n:巡查周期) remove n:巡查周期 set n:巡检周期")
